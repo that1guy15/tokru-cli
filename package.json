@@ -1,0 +1,39 @@
+{
+  "name": "create-tokru-profile",
+  "version": "0.1.0",
+  "description": "Publish a machine-readable capability profile for the AI era — discoverable by agents in under 15 minutes.",
+  "type": "module",
+  "bin": {
+    "create-tokru-profile": "./bin/create-tokru-profile.js",
+    "tokru": "./bin/tokru.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md"
+  ],
+  "keywords": [
+    "tokru",
+    "capability-profile",
+    "a2a",
+    "agent-card",
+    "ai",
+    "professional-profile"
+  ],
+  "author": "Ryan Booth <ryan@brc-ai.net>",
+  "homepage": "https://tokru.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/that1guy15/tokru-cli"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.0.0",
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.2.0",
+    "ora": "^8.0.1"
+  }
+}
