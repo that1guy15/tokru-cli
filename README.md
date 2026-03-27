@@ -7,6 +7,10 @@
 
 ---
 
+> ⚠️ **Early experimental release.** Tokru is in active development. APIs, schema fields, and the CLI wizard may change between versions. Use in production at your own risk. Feedback and bug reports are very welcome — [open an issue](https://github.com/that1guy15/tokru-cli/issues).
+
+---
+
 ## What is Tokru?
 
 [Tokru](https://tokru.ai) is trust infrastructure for the AI economy. It gives professionals a standardized, machine-readable capability profile — discoverable by search, queryable by AI agents, and owned by you.
@@ -19,17 +23,32 @@ Think of it as your professional presence for the AI era:
 
 ---
 
+## What You Actually Get
+
+Running this CLI does three things:
+
+**1. Deploys your personal portfolio site**
+A live website at `tokru-yourhandle.workers.dev` (or your own custom domain) that you own and control. It showcases your capabilities, availability, pricing, and portfolio work — and serves machine-readable endpoints for AI agents. This is *your* site, hosted on your Cloudflare account.
+
+**2. Registers you on the Tokru registry**
+Your profile is indexed at [tokru.ai/profile/yourhandle](https://tokru.ai) — discoverable by anyone searching for professionals with your skills, and queryable by AI agents on behalf of potential clients.
+
+**3. Generates your TOKRU.md**
+A handoff document you drop into any AI assistant's workspace. From that point, "update my availability" or "add a case study" is just a conversation — your AI handles the rest.
+
+---
+
 ## Quick Start
 
 ```bash
 npx create-tokru-profile
 ```
 
-That's it. The interactive wizard takes about 10 minutes and walks you through everything.
+The interactive wizard takes about 10 minutes.
 
 ---
 
-## What You Get
+## What Files You Get
 
 After completing the wizard, you'll have:
 
@@ -38,7 +57,7 @@ After completing the wizard, you'll have:
 | `capability-profile.json` | Your full structured profile (the source of truth) |
 | `agent-card.json` | Machine-readable identity for AI agent discovery |
 | `TOKRU.md` | Handoff document for your AI assistant |
-| `worker/` | Deployable Cloudflare Worker (optional) |
+| `worker/` | Your personal portfolio site — ready to deploy |
 
 Your profile is also automatically registered at [tokru.ai](https://tokru.ai) — discoverable immediately.
 
