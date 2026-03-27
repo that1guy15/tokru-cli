@@ -1,6 +1,6 @@
 {
   "name": "create-tokru-profile",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Publish a machine-readable capability profile for the AI era — discoverable by agents in under 15 minutes.",
   "type": "module",
   "bin": {
