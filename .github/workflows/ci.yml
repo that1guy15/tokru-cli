@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check package structure
+        run: |
+          echo "Checking required files..."
+          test -f bin/create-tokru-profile.js && echo "✅ bin/create-tokru-profile.js"
+          test -f bin/tokru.js && echo "✅ bin/tokru.js"
+          test -f src/index.js && echo "✅ src/index.js"
+          test -f README.md && echo "✅ README.md"
+
+      - name: Dry-run pack (verify publishable)
+        run: npm pack --dry-run
+
+      - name: Validate package.json
+        run: npm pkg fix --dry-run 2>&1 | grep -v "^$" || true
